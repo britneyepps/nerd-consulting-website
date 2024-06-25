@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Typography, Button, TextField, MenuItem, Grid } from '@mui/material';
+import { Box, Typography, Button, TextField, MenuItem} from '@mui/material';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
