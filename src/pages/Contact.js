@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Typography, Button, TextField, MenuItem} from '@mui/material';
+import { Box, Typography, Button, TextField, MenuItem } from '@mui/material';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
@@ -155,7 +155,7 @@ const Contact = () => {
   };
 
   return (
-    <Box sx={{ padding: '20px' }}>
+    <Box sx={{ padding: { xs: '10px', md: '20px' } }}>
       <Typography
         variant="h3"
         gutterBottom

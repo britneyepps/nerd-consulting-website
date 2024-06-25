@@ -4,7 +4,7 @@ import { Business, Group, Public } from '@mui/icons-material';
 
 const About = () => {
   return (
-    <Box sx={{ padding: '20px' }}>
+    <Box sx={{ padding: { xs: '10px', md: '20px' } }}>
       <Typography
         variant="h3"
         gutterBottom

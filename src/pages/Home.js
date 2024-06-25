@@ -43,7 +43,7 @@ const Home = () => {
   };
 
   return (
-    <Box sx={{ padding: '20px' }}>
+    <Box sx={{ padding: { xs: '10px', md: '20px' } }}>
       {/* Hero Section */}
       <Grid container spacing={4} alignItems="center" sx={{ marginBottom: '40px' }}>
         <Grid item xs={12} md={6}>
@@ -69,13 +69,13 @@ const Home = () => {
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', color: '#FC902B' }}>
+          <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', color: '#FC902B', textAlign: { xs: 'center', md: 'left' } }}>
             Technical Growth for Underrepresented Communities
           </Typography>
-          <Typography variant="body1" gutterBottom>
+          <Typography variant="body1" gutterBottom sx={{ textAlign: { xs: 'center', md: 'left' } }}>
             Nerd Consulting is a black-owned tech business dedicated to bridging the gap between technical and non-technical teams. We provide consulting sessions, project planning, and educational programs to empower underrepresented communities in the tech industry.
           </Typography>
-          <Box sx={{ textAlign: 'center', marginTop: '20px' }}>
+          <Box sx={{ textAlign: { xs: 'center', md: 'left' }, marginTop: '20px' }}>
             <Button variant="contained" sx={{ backgroundColor: '#FC902B', color: 'white' }}>
               Learn More
             </Button>
@@ -98,7 +98,7 @@ const Home = () => {
           <Typography variant="body1" gutterBottom>
             Partner with us to leverage technology for your business growth. Reach out today to discover how we can help you succeed.
           </Typography>
-          <Box sx={{ textAlign: 'left', marginTop: '20px' }}>
+          <Box sx={{ textAlign: { xs: 'center', md: 'left' }, marginTop: '20px' }}>
             <Button variant="outlined" component={Link} to="/about" sx={{ color: 'black', borderColor: 'black' }}>
               Learn More About Us
             </Button>
@@ -255,7 +255,7 @@ const Home = () => {
 
       {/* Call to Action */}
       <Box sx={{ marginBottom: '40px', textAlign: 'center' }}>
-        <Button variant="contained" component={Link} to="/contact" sx={{ backgroundColor: '#FC902B', color: 'white', width: '60%' }}>
+        <Button variant="contained" component={Link} to="/contact" sx={{ backgroundColor: '#FC902B', color: 'white', width: { xs: '100%', md: '60%' } }}>
           Contact Us
         </Button>
       </Box>

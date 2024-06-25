@@ -1,10 +1,11 @@
 import React from 'react';
-import { Box, Typography, Button, Grid } from '@mui/material';
+import { Box, Typography, Button, Grid, Paper } from '@mui/material';
 import { Build, Assignment, School } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   return (
-    <Box sx={{ padding: '20px' }}>
+    <Box sx={{ padding: { xs: '10px', md: '20px' } }}>
       <Typography
         variant="h3"
         gutterBottom
@@ -20,7 +21,7 @@ const Services = () => {
         Our Services
       </Typography>
       
-      <Grid container spacing={4} justifyContent="center" sx={{ marginBottom: '40px' }}>
+      <Grid container spacing={2} justifyContent="center" sx={{ marginBottom: '20px' }}>
         <Grid item>
           <Button
             variant="contained"
@@ -219,7 +220,7 @@ const Services = () => {
         </Typography>
         <Button
           variant="contained"
-          component={Grid}
+          component={Link}
           to="/contact"
           sx={{
             backgroundColor: '#FC902B',
