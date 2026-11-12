@@ -3,44 +3,33 @@ import { Box, Typography, Link as MuiLink, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const links = [
+    ['Home', '/'],
+    ['About', '/about'],
+    ['Services', '/services'],
+    ['Speaking', '/speaking'],
+    ['Contact', '/contact'],
+  ];
+
   return (
-    <Box
-      sx={{
-        backgroundColor: '#FC902B',
-        padding: '20px',
-        textAlign: 'center',
-      }}
-    >
+    <Box component="footer" sx={{ backgroundColor: '#FC902B', padding: '20px', textAlign: 'center' }}>
       <Grid container spacing={2} justifyContent="center">
-        <Grid item>
-          <MuiLink component={Link} to="/" sx={{ color: 'black', textDecoration: 'none' }}>
-            Home
-          </MuiLink>
-        </Grid>
-        <Grid item>
-          <MuiLink component={Link} to="/about" sx={{ color: 'black', textDecoration: 'none' }}>
-            About
-          </MuiLink>
-        </Grid>
-        <Grid item>
-          <MuiLink component={Link} to="/services" sx={{ color: 'black', textDecoration: 'none' }}>
-            Services
-          </MuiLink>
-        </Grid>
-        <Grid item>
-          <MuiLink component={Link} to="/contact" sx={{ color: 'black', textDecoration: 'none' }}>
-            Contact
-          </MuiLink>
-        </Grid>
+        {links.map(([name, path]) => (
+          <Grid item key={path}>
+            <MuiLink component={Link} to={path} sx={{ color: 'black', textDecoration: 'none' }}>
+              {name}
+            </MuiLink>
+          </Grid>
+        ))}
       </Grid>
       <Typography sx={{ color: 'black', marginTop: '10px' }}>
         Contact Email: britney@nerdconsulting.tech
       </Typography>
-      <MuiLink href="https://www.instagram.com/nerdconsulting" target="_blank" rel="noopener noreferrer" sx={{ color: 'black', textDecoration: 'none' }}>
+      <MuiLink href="https://www.instagram.com/nerdconsulting" target="_blank"
+        rel="noopener noreferrer" sx={{ color: 'black', textDecoration: 'none' }}>
         Instagram
       </MuiLink>
     </Box>
   );
 };
-
 export default Footer;
